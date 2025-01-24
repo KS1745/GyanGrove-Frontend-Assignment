@@ -1,0 +1,209 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5; 
+  color: #333; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh;
+  overflow-x: hidden; 
+}
+
+.app {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 900px;
+  margin: 40px auto; 
+  text-align: center;
+}
+
+/* Scrollable Page Fix */
+html {
+  scroll-behavior: smooth; 
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 25px;
+  color: #444;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.filter-bar select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 48%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* Inventory Table */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 20px 15px; 
+  border: 1px solid #f0f0f0;
+}
+
+.inventory-table th {
+  background-color: #444;
+  color: white;
+  font-size: 15px;
+  text-align: center; 
+}
+
+.inventory-table td {
+  background: #fdfdfd;
+  color: #333;
+  font-size: 14px;
+  text-align: center; 
+}
+
+/* Highlight low stock */
+.inventory-table .low-stock td {
+  background: #ffe6e6;
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Buttons in Table */
+.inventory-table button {
+  padding: 8px 14px;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin: 0 5px; 
+}
+
+.inventory-table .edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.inventory-table .delete-button {
+  background-color: #e63946;
+  color: white;
+}
+
+.inventory-table button:hover {
+  transform: scale(1.1); 
+  opacity: 0.9;
+}
+
+/* Add Item Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+  padding: 12px 16px;
+  font-size: 15px;
+  color: white;
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: #45a049;
+  transform: scale(1.05); 
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; 
+}
+
+.modal form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  color: white;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal button:hover {
+  background: #555;
+}
